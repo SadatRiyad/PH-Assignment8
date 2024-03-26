@@ -1,11 +1,18 @@
 /* eslint-disable react/prop-types */
 import Tag from "../Tag/Tag";
 import ratings from "../../assets/rating.png";
+import { Link } from "react-router-dom";
+
 
 const Book = ({ book }) => {
-    const { bookName, image, tags, author, category, rating } = book;
+    const {bookId, bookName, image, tags, author, category, rating } = book;
+    
+    // const bookDtails = () => {
+        
+    // }
     return (
-        <div className="card bg-base-100 shadow-md border-[.5px] transition-transform duration-300 transform hover:shadow-2xl">
+        <Link to={`/book/${bookId}`}> 
+            <div className="card bg-base-100 shadow-md border-[.5px] transition-transform duration-300 transform hover:shadow-2xl">
             <div className="p-4">
                 <figure className=" pt-4 w-full py-1 rounded-xl bg-[#F3F3F3]">
                     <img src={image} alt="book" className="w-fit p-1 pb-2 transition-transform duration-300 transform hover:scale-[1.03]" />
@@ -30,6 +37,7 @@ const Book = ({ book }) => {
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
 
