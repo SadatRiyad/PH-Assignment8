@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-inline: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+.font-WorkSans{
+  font-family: "Work Sans", sans-serif;
+}
+.font-PlayfairDisplay{
+  font-family: "Playfair Display", serif;
+}
+
+
+/* header start */
+header {
+  background-color: #1313130D;
+  background-position: top center;
+  background-size: cover;
+  border-radius: 16px;
+  text-align: left;
+  padding: 70px 0px 50px;
+  margin-top: 5px;
+}
+/* header end */
