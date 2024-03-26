@@ -1,5 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Tag from "../Tag/Tag";
+import { saveToLocalStorage } from "../../utils/localStorage";
+// eslint-disable-next-line no-unused-vars
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BookDtails = () => {
     const book = useLoaderData();
@@ -8,6 +12,15 @@ const BookDtails = () => {
     const theBook = book.find((book) => book.bookId === IdInt);
 
     const { bookName, image, tags, author, category, rating, review, totalPages, publisher, yearOfPublishing } = theBook;
+
+
+    const handleRead = () => {
+        saveToLocalStorage(theBook);
+    }
+    const handleWishlist = () => {
+        console.log("handleWishlist")
+    }
+
 
     return (
 
@@ -32,10 +45,11 @@ const BookDtails = () => {
                 <p className="text-primary font-semibold text-xs md:text-base lg:text-lg mt-1"><span className="text-tertiary font-bold">Rating : </span> {rating}</p>
 
                 <div className="card-actions justify-start mt-3 gap-1 md:gap-3">
-                    <a href="#"><button className="btn bg-transparent hover:bg-green border-primary text-primary hover:text-white rounded hover:border-green  hover:-translate-y-1 transition-all duration-200 ml-0">Read</button></a>
-                    <a href="#"><button className="btn bg-[#59C6D2] hover:bg-transparent border-[#59C6D2] text-white hover:text-[#59C6D2] hover:border-[#7cb1b7] rounded hover:-translate-y-1 transition-all duration-200">Wishlist</button></a>
+                    <a href="#"><button onClick={handleRead()} className="btn bg-transparent hover:bg-green border-primary text-primary hover:text-white rounded hover:border-green  hover:-translate-y-1 transition-all duration-200 ml-0">Read</button></a>
+                    <a href="#"><button onClick={handleWishlist} className="btn bg-[#59C6D2] hover:bg-transparent border-[#59C6D2] text-white hover:text-[#59C6D2] hover:border-[#7cb1b7] rounded hover:-translate-y-1 transition-all duration-200">Wishlist</button></a>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

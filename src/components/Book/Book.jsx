@@ -7,9 +7,6 @@ import { Link } from "react-router-dom";
 const Book = ({ book }) => {
     const {bookId, bookName, image, tags, author, category, rating } = book;
     
-    // const bookDtails = () => {
-        
-    // }
     return (
         <Link to={`/book/${bookId}`}> 
             <div className="card bg-base-100 shadow-md border-[.5px] transition-transform duration-300 transform hover:shadow-2xl">
