@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div>
             <div>
-                <footer className="footer footer-center p-10 bg-green text-primary-content pt-20 pb-10 mx-auto">
+                <footer className="footer footer-center p-10 bg-[#1313130D] text-primary-content pt-20 pb-10 mx-auto">
                     <aside>
                         <img src={footerLogo} alt="footer logo" className="w-52 md:w-60 mb-4 mr-6" />
                         <span className='text-3xl font-semibold text-primary opacity-80 px-8 mb-1'>Welcome to  our website!</span>

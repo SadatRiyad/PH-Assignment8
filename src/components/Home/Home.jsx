@@ -1,11 +1,15 @@
+import { useLoaderData } from "react-router-dom";
+import Books from "../Books/Books";
 import Header from "../Header/Header";
 
 const Home = () => {
+    // getting books data using useLoaderData hook
+    const books = useLoaderData();
+    // console.log(books)
     return (
         <div>
             <Header></Header>
-            <h1>Home</h1>
-            <p>This is the home page of the BB-Book app.</p>
+            <Books allBooks={books}></Books>
         </div>
     );
 };

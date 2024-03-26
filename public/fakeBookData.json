@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Dating PlayBook",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://binarybeasts.com/resources/img/b1.png",
+      "review": "A timeless classic that delves into the decadence and disillusionment of the Jazz Age.",
+      "totalPages": 180,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Classic", "Romance"],
+      "publisher": "Scribner",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 2,
+      "bookName": "Money?",
+      "author": "Harper Lee",
+      "image": "https://binarybeasts.com/resources/img/b2.png",
+      "review": "An unforgettable tale of racial injustice and moral growth in the American South.",
+      "totalPages": 324,
+      "rating": 4.8,
+      "category": "Finance",
+      "tags": ["Classic", "Social Justice"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 3,
+      "bookName": "The Hate You Give",
+      "author": "George Orwell",
+      "image": "https://binarybeasts.com/resources/img/b3.png",
+      "review": "A chilling dystopian novel that explores themes of surveillance, propaganda, and totalitarianism.",
+      "totalPages": 328,
+      "rating": 4.7,
+      "category": "Romance",
+      "tags": ["Dystopian", "Political"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 4,
+      "bookName": "Spine of the Dragon",
+      "author": "Jane Austen",
+      "image": "https://binarybeasts.com/resources/img/b7.png",
+      "review": "A sparkling comedy of manners that explores love, class, and societal expectations.",
+      "totalPages": 432,
+      "rating": 4.6,
+      "category": "Action",
+      "tags": ["Romance", "Satire"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 5,
+      "bookName": "Family Code",
+      "author": "J.D. Salinger",
+      "image": "https://binarybeasts.com/resources/img/b5.png",
+      "review": "A poignant coming-of-age story that captures the angst and alienation of adolescence.",
+      "totalPages": 224,
+      "rating": 4.4,
+      "category": "Family",
+      "tags": ["Coming of Age", "Teenage"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 6,
+      "bookName": "Loving More",
+      "author": "J.R.R. Tolkien",
+      "image": "https://binarybeasts.com/resources/img/b6.png",
+      "review": "An enchanting tale of adventure, friendship, and the quest for treasure in Middle-earth.",
+      "totalPages": 304,
+      "rating": 4.9,
+      "category": "Fantasy",
+      "tags": ["Adventure", "Quest"],
+      "publisher": "Allen & Unwin",
+      "yearOfPublishing": 1937
+    }
+  ]
+  
