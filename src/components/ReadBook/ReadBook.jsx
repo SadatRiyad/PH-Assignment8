@@ -26,7 +26,7 @@ const ReadBook = ({ book }) => {
                     <p className="flex text-tertiary p-1"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 24 25" fill="none">
                         <path d="M15 11C15 11.7956 14.6839 12.5587 14.1213 13.1213C13.5587 13.6839 12.7956 14 12 14C11.2044 14 10.4413 13.6839 9.87868 13.1213C9.31607 12.5587 9 11.7956 9 11C9 10.2044 9.31607 9.44129 9.87868 8.87868C10.4413 8.31607 11.2044 8 12 8C12.7956 8 13.5587 8.31607 14.1213 8.87868C14.6839 9.44129 15 10.2044 15 11Z" stroke="#424242" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M19.5 11C19.5 18.142 12 22.25 12 22.25C12 22.25 4.5 18.142 4.5 11C4.5 9.01088 5.29018 7.10322 6.6967 5.6967C8.10322 4.29018 10.0109 3.5 12 3.5C13.9891 3.5 15.8968 4.29018 17.3033 5.6967C18.7098 7.10322 19.5 9.01088 19.5 11Z" stroke="#424242" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg> Year of Publishing: <pre><span> {yearOfPublishing}</span></pre></p>
+                    </svg> Year of Publishing: <span className="ml-1">{yearOfPublishing}</span></p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-6">
                     <p className="flex pb-2 text-sm font-semibold text-tertiary"><svg className="mr-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -39,14 +39,14 @@ const ReadBook = ({ book }) => {
                 <hr className="mb-2 w-full" />
                 <div className="flex w-full gap-2">
                     <div>
-                        <button className="px-2 py-1 bg-[#328EFF26] text-[#328EFF] text-sm rounded-3xl font-medium">Category: {category}</button>
+                        <button className="px-2 py-1 bg-[#328EFF26] text-[#328EFF] text-sm rounded-2xl font-medium">Category: {category}</button>
                     </div>
                     <div>
-                        <button className="px-2 py-1 bg-[#FFAC3326] text-[#FFAC33] text-sm rounded-3xl font-medium">Rating: {rating}</button>
+                        <button className="px-2 py-1 bg-[#FFAC3326] text-[#FFAC33] text-sm rounded-2xl font-medium">Rating: {rating}</button>
                     </div>
                     <div>
                         <Link to={`/book/${bookId}`}>
-                            <button className="px-2 py-1 bg-[#23BE0A] text-white text-sm rounded-3xl font-medium">View Details</button>
+                            <button className="px-2 py-1 bg-[#23BE0A] text-white text-sm rounded-2xl font-medium">View Details</button>
                         </Link>
                     </div>
 
