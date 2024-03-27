@@ -9,6 +9,7 @@ export const saveToLocalStorage = (data) => {
     savedData.push(data);
     localStorage.setItem("books", JSON.stringify(savedData));
     toast("Books are added to Read List Successfully", {
+      type: "success",
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
@@ -56,6 +57,7 @@ export const saveToLocalStorage1 = (data, existed) => {
     newSavedData.push(data);
     localStorage.setItem("wishlistBooks", JSON.stringify(newSavedData));
     toast("Book added to Wishlist Successfully", {
+      type: "success",
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
