@@ -1,13 +1,14 @@
 import { toast } from "react-toastify";
+let existedRead = false;
 
 export const saveToLocalStorage = (data) => {
   const savedData = JSON.parse(localStorage.getItem("books")) || [];
-
   const existed = savedData.find((book) => book.bookId == data.bookId);
 
   if (!existed) {
     savedData.push(data);
     localStorage.setItem("books", JSON.stringify(savedData));
+    existedRead = true;
     toast("Books are added to Read List Successfully", {
       type: "success",
       position: "top-right",
@@ -18,7 +19,6 @@ export const saveToLocalStorage = (data) => {
       draggable: true,
       progress: undefined,
     });
-    // saveToLocalStorage1(existed);
   } else {
     toast("This Book is already in your Read List", {
       type: "info",
@@ -31,7 +31,7 @@ export const saveToLocalStorage = (data) => {
       progress: undefined,
     });
   }
-  return { savedData, existed };
+  return { savedData };
 };
 
 export const getFromLocalStorage = () => {
@@ -39,12 +39,15 @@ export const getFromLocalStorage = () => {
   return data;
 };
 
-export const saveToLocalStorage1 = (data, existed) => {
+export const saveToLocalStorage1 = (data) => {
   const newSavedData = JSON.parse(localStorage.getItem("wishlistBooks")) || [];
   const isexisted = newSavedData.find((book) => book.bookId == data.bookId);
 
-  if (existed && !isexisted) {
-    toast("Can't add to wishlish, Book is already read", {
+  if (!existedRead && !isexisted) {
+    newSavedData.push(data);
+    localStorage.setItem("wishlistBooks", JSON.stringify(newSavedData));
+    toast("Book added to Wishlist Successfully", {
+      type: "success",
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
@@ -53,11 +56,9 @@ export const saveToLocalStorage1 = (data, existed) => {
       draggable: true,
       progress: undefined,
     });
-  } else if (!existed && !isexisted) {
-    newSavedData.push(data);
-    localStorage.setItem("wishlistBooks", JSON.stringify(newSavedData));
-    toast("Book added to Wishlist Successfully", {
-      type: "success",
+  } else if (!isexisted || (isexisted && existedRead)) {
+    toast("Can't add to wishlish, Book is already Read", {
+      type: "error",
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,

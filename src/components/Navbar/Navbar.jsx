@@ -4,11 +4,11 @@ import '../Navbar/Navbar.css'
 
 const Navbar = () => {
     const Links = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/listedBooks">Listed Books</NavLink></li>
-        <li><NavLink to="/pagesToRead">Pages to Read</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/contactUs">Contact Us</NavLink></li>
+        <li><NavLink to="/" className="hover:text-white hover:bg-green transition-colors duration-75 mr-[2px]">Home</NavLink></li>
+        <li><NavLink to="/listedBooks" className="hover:text-white hover:bg-green transition-colors duration-75 mr-[2px]">Listed Books</NavLink></li>
+        <li><NavLink to="/pagesToRead" className="hover:text-white hover:bg-green transition-colors duration-75 mr-[2px]">Pages to Read</NavLink></li>
+        <li><NavLink to="/about" className="hover:text-white hover:bg-green transition-colors duration-75 mr-[2px]">About</NavLink></li>
+        <li><NavLink to="/contactUs" className="hover:text-white hover:bg-green transition-colors duration-75 mr-[2px]">Contact Us</NavLink></li>
     </>
 
     return (

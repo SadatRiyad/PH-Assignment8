@@ -1,4 +1,4 @@
-a.active{
+a.active, a:focus{
     background-color: transparent !important;
     border: 1px solid #23BE0A !important;
     color: #23BE0A !important;
