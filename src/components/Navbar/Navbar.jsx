@@ -3,6 +3,7 @@ import logo from '../../assets/logo.png';
 import '../Navbar/Navbar.css'
 
 const Navbar = () => {
+
     const Links = <>
         <li><NavLink to="/" className="hover:text-white hover:bg-green transition-colors duration-75 mr-[2px]">Home</NavLink></li>
         <li><NavLink to="/listedBooks" className="hover:text-white hover:bg-green transition-colors duration-75 mr-[2px]">Listed Books</NavLink></li>

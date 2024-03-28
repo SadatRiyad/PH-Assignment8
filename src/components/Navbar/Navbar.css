@@ -1,5 +1,9 @@
-a.active, a:focus{
+a.active{
     background-color: transparent !important;
     border: 1px solid #23BE0A !important;
+    color: #23BE0A !important;
+}
+a:focus {
+    background-color: transparent !important;
     color: #23BE0A !important;
 }

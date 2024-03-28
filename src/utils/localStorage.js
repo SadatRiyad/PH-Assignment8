@@ -1,5 +1,4 @@
 import { toast } from "react-toastify";
-let existedRead = false;
 
 export const saveToLocalStorage = (data) => {
   const savedData = JSON.parse(localStorage.getItem("books")) || [];
@@ -8,7 +7,6 @@ export const saveToLocalStorage = (data) => {
   if (!existed) {
     savedData.push(data);
     localStorage.setItem("books", JSON.stringify(savedData));
-    existedRead = true;
     toast("Books are added to Read List Successfully", {
       type: "success",
       position: "top-right",
@@ -40,6 +38,8 @@ export const getFromLocalStorage = () => {
 };
 
 export const saveToLocalStorage1 = (data) => {
+  const savedData = JSON.parse(localStorage.getItem("books")) || [];
+  const existedRead = savedData.find((book) => book.bookId == data.bookId);
   const newSavedData = JSON.parse(localStorage.getItem("wishlistBooks")) || [];
   const isexisted = newSavedData.find((book) => book.bookId == data.bookId);
 

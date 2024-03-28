@@ -20,7 +20,7 @@ const BookDtails = () => {
         saveToLocalStorage1(theBook);
     }
 
-
+    
     return (
 
         <div className="card lg:card-side bg-base-100 my-20">

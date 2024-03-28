@@ -74,7 +74,7 @@ const ListedBooks = () => {
                     </ul>
                 </div>
             </div>
-            <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+            <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)} className={'mb-32'}>
                 <TabList>
                     <Tab>Read Books</Tab>
                     <Tab>Wishlist Books</Tab>
